@@ -1,0 +1,68 @@
+/*
+Author: Matt Pahuta
+https://www.mattpahuta.com
+Date: 
+*/
+
+/* **************** */
+/* Custom Variables */
+/* **************** */
+:root {
+  /* font-family: 'Rubik', sans-serif; */
+  /* FONTS */
+
+  /* FONT SIZES */
+
+  /* COLORS */
+  
+  /* BORDER RADIUS */
+  --br-soft: 1rem;
+  --br-round: 50%;
+  
+  /*FONT SIZES*/
+  --fs-xsml: 1rem;
+  --fs-sml: 1.25rem;
+  --fs-med: 1.5rem;
+  --fs-lrg: 2.25rem;
+  --fs-xlrg: 2.5rem;
+  --fs-black: 5rem;
+}
+
+/* RESET */
+/* Josh Comeau custom css reset */
+/* https://www.joshwcomeau.com/css/custom-css-reset/ */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+/* BASE STYLES */

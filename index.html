@@ -12,61 +12,110 @@
 </head>
 <body>
 
-  Report for
-  Jeremy Robson
+  <main>
+    <div class="dashboard-container">
 
-  Daily
-  Weekly
-  Monthly
+      <div class="user-card dashboard-card">
+        <div class="user-details">
+          <!-- img src, alt as dynamic via JS -->
+          <img src="./images/image-jeremy.png" alt="Jeremy Robson's avatar">
+          <p>Report for</p>
+          <h1 class="user-title">Jeremy Robson</h1>
+        </div>
+        <div class="selectors">
+          <p class="period">Daily</p>
+          <p class="period selected">Weekly</p>
+          <p class="period">Monthly</p>
+        </div>
+      </div>
 
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
+      <!-- work result -->
+      <div class="result-card dashboard-card">
+        <div class="result-card-inner">
+          <div class="result-header">
+            <h3>Work</h3>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+          </div>
+          <div class="result-body">
+            <p class="current-result"><span id="current-result">32hrs</span></p>
+            <p class="previous-result">Previous - <span id="previous-result">36hrs</span></p>
+          </div>
+        </div>
+      </div>
 
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
+      <!-- play result -->
+      <div class="result-card dashboard-card">
+        <div class="result-card-inner">
+          <div class="result-header">
+            <h3>Play</h3>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+          </div>
+          <div class="result-body">
+            <p class="current-result"><span id="current-result">10hrs</span></p>
+            <p class="previous-result">Previous - <span id="previous-result">8hrs</span></p>
+          </div>
+        </div>
+      </div>
 
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
+      <!-- study result -->
+      <div class="result-card dashboard-card">
+        <div class="result-card-inner">
+          <div class="result-header">
+            <h3>Study</h3>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+          </div>
+          <div class="result-body">
+            <p class="current-result"><span id="current-result">4hrs</span></p>
+            <p class="previous-result">Previous - <span id="previous-result">7hrs</span></p>
+          </div>
+        </div>
+      </div>
 
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
+      <!-- exercise result -->
+      <div class="result-card dashboard-card">
+        <div class="result-card-inner">
+          <div class="result-header">
+            <h3>Exercise</h3>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+          </div>
+          <div class="result-body">
+            <p class="current-result"><span id="current-result">4hrs</span></p>
+            <p class="previous-result">Previous - <span id="previous-result">5hrs</span></p>
+          </div>
+        </div>
+      </div>
 
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
+      <!-- social result -->
+      <div class="result-card dashboard-card">
+        <div class="result-card-inner">
+          <div class="result-header">
+            <h3>Social</h3>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+          </div>
+          <div class="result-body">
+            <p class="current-result"><span id="current-result">5hrs</span></p>
+            <p class="previous-result">Previous - <span id="previous-result">10hrs</span></p>
+          </div>
+        </div>
+      </div>
 
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
+      <!-- self care result -->
+      <div class="result-card dashboard-card">
+        <div class="result-card-inner">
+          <div class="result-header">
+            <h3>Self Care</h3>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+          </div>
+          <div class="result-body">
+            <p class="current-result"><span id="current-result">2hrs</span></p>
+            <p class="previous-result">Previous - <span id="previous-result">2hrs</span></p>
+          </div>
+        </div>
+      </div>
 
+    </div> <!-- end dashboard container-->
+    
+  </main>
   
 </body>
 </html>

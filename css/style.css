@@ -10,22 +10,53 @@ Date:
 :root {
   /* font-family: 'Rubik', sans-serif; */
   /* FONTS */
+  --ff-primary: 'Rubik', sans-serif;
 
   /* FONT SIZES */
+  --fs-300: .938rem;
+  --fs-400: 1.125rem;
+  --fs-600: 1.5rem;
+  --fs-700: 2rem;
+  --fs-800: 2.5rem;
+  --fs-900: 3.5rem;
+
+  /* FONT WEIGHTS */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-bold: 500;
 
   /* COLORS */
+  /* Primary Colors */
+
+  --clr-light-orange: hsl(15, 100%, 70%);
+  --clr-soft-blue: hsl(195, 74%, 62%);
+  --clr-light-red: hsl(348, 100%, 68%);
+  --clr-lime-green: hsl(145, 58%, 55%);
+  --clr-violet: hsl(264, 64%, 52%);
+  --clr-soft-yellow: hsl(43, 84%, 65%);
+  /* Neutral Colors */
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-dark-blue: hsl(235, 46%, 20%);
+  --clr-desaturate-blue: hsl(235, 45%, 61%);
+  --clr-pale-blue: hsl(236, 100%, 87%);
+  /* Dark background */
+  --bg-primary: hsl(226, 43%, 10%);
+
   
   /* BORDER RADIUS */
-  --br-soft: 1rem;
+  --br-soft: 15px;
   --br-round: 50%;
+
+  --grid-gap: 1.5rem;
   
-  /*FONT SIZES*/
-  --fs-xsml: 1rem;
-  --fs-sml: 1.25rem;
-  --fs-med: 1.5rem;
-  --fs-lrg: 2.25rem;
-  --fs-xlrg: 2.5rem;
-  --fs-black: 5rem;
+
+}
+
+@media (min-width: 600px) {
+    :root {
+
+      --grid-gap: 1.875rem;
+    }
 }
 
 /* RESET */
@@ -66,3 +97,9 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 /* BASE STYLES */
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-400);
+  color: var(--clr-white);
+  background: var(--bg-primary);
+}

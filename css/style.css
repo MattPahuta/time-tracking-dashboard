@@ -34,10 +34,12 @@ Date:
   --clr-lime-green: hsl(145, 58%, 55%);
   --clr-violet: hsl(264, 64%, 52%);
   --clr-soft-yellow: hsl(43, 84%, 65%);
+
   /* Neutral Colors */
   --clr-white: hsl(0, 0%, 100%);
+  --clr-blue: hsl(246, 80%, 60%, 1);
   --clr-dark-blue: hsl(235, 46%, 20%);
-  --clr-desaturate-blue: hsl(235, 45%, 61%);
+  --clr-desaturated-blue: hsl(235, 45%, 61%);
   --clr-pale-blue: hsl(236, 100%, 87%);
   /* Dark background */
   --bg-primary: hsl(226, 43%, 10%);
@@ -98,8 +100,74 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* BASE STYLES */
 body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
   font-family: var(--ff-primary);
   font-size: var(--fs-400);
   color: var(--clr-white);
   background: var(--bg-primary);
+}
+
+main {
+  padding: 0 1.5rem;
+}
+
+/* @media (min-width: 600px) {
+  body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+} */
+
+.dashboard-container {
+  display: grid;
+  gap: 1.5rem;
+}
+
+
+/* User Card Styles */
+.user-card {
+  border: 1px solid red; /* debug */
+}
+
+.user-card-details {
+  background: var(--clr-blue);
+}
+
+
+.user-card-details,
+.period-selectors {
+  display: flex;
+}
+
+.user-card-details img {
+  width: 4rem;
+  border: 3px solid var(--clr-white);
+  border-radius: var(--br-round);
+}
+
+.user-card-title h1 {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-light);
+}
+
+.user-card-title p {
+  font-size: var(--fs-300);
+}
+
+.user-card-title p,
+.previous-result {
+  color: var(--clr-pale-blue);
+}
+
+.period-selectors {
+  color: var(--clr-desaturated-blue);
+}
+
+
+/* Selected period class */
+.selected {
+  color: var(--clr-white);
 }

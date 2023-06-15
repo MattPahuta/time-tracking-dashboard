@@ -109,9 +109,9 @@ body {
   background: var(--bg-primary);
 }
 
-main {
+/* main {
   padding: 0 1.5rem;
-}
+} */
 
 /* @media (min-width: 600px) {
   body {
@@ -128,18 +128,25 @@ main {
 
 
 /* User Card Styles */
-.user-card {
-  border: 1px solid red; /* debug */
-}
+.user-card,
+.user-card-details,
+.result-card,
+.result-card-inner {
+  border-radius: var(--br-soft);
+  /* border: 1px solid red; */
 
-.user-card-details {
-  background: var(--clr-blue);
 }
-
 
 .user-card-details,
 .period-selectors {
   display: flex;
+}
+
+.user-card-details {
+  padding: 2rem 2.25rem;
+  align-items: center;
+  gap: 1.25rem;
+  background: var(--clr-blue);
 }
 
 .user-card-details img {
@@ -151,6 +158,7 @@ main {
 .user-card-title h1 {
   font-size: var(--fs-600);
   font-weight: var(--fw-light);
+  line-height: 28px;
 }
 
 .user-card-title p {
@@ -163,8 +171,18 @@ main {
 }
 
 .period-selectors {
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: space-around;
   color: var(--clr-desaturated-blue);
 }
+
+.user-card,
+.result-card-inner {
+  background: var(--clr-dark-blue);
+}
+
+/* Result Card Styles */
 
 
 /* Selected period class */

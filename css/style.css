@@ -101,17 +101,19 @@ p, h1, h2, h3, h4, h5, h6 {
 /* BASE STYLES */
 body {
   min-height: 100vh;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: var(--ff-primary);
   font-size: var(--fs-400);
   color: var(--clr-white);
   background: var(--bg-primary);
 }
 
-/* main {
+main {
+  max-width: 100%;
   padding: 0 1.5rem;
-} */
+}
 
 /* @media (min-width: 600px) {
   body {
@@ -121,10 +123,28 @@ body {
   }
 } */
 
+/* Typography */
+
+h1, h2 {
+  line-height: 1.2;
+}
+
+.dashboard-container h3 {
+  font-size: var(--fs-400);
+}
+
 .dashboard-container {
+  width: 100%;
+  max-width: 1120px;
   display: grid;
   gap: 1.5rem;
 }
+
+.dashboard-card {
+  /* max-width: 327px; */
+}
+
+
 
 
 /* User Card Styles */
@@ -159,7 +179,6 @@ body {
 .user-card-title h1 {
   font-size: var(--fs-600);
   font-weight: var(--fw-light);
-  line-height: 28px;
 }
 
 .user-card-title p {
@@ -245,4 +264,50 @@ body {
 /* Selected period class */
 .selected {
   color: var(--clr-white);
+}
+
+@media (min-width: 600px) {
+  .dashboard-container {
+    gap: 1.875rem;
+    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  }
+  .user-card {
+    grid-column: 1 / span 2;
+  }
+
+  .user-card-details,
+  .period-selectors {
+    padding: 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .user-card-details {
+    gap: 2.625rem;
+  }
+
+  .user-card-details img {
+    width: 4.875rem;
+  }
+  .user-card-details h1 {
+    font-size: var(--fs-800);
+  }
+  .period-selectors {
+    gap: 1.25rem;
+  }
+
+  /* result cards */
+  .result-body {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .current-result {
+    font-size: var(--fs-900);
+  }
+
+}
+
+@media (min-width: 960px) {
+
 }

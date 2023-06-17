@@ -187,17 +187,33 @@ body {
 
 .result-card {
   padding-top: 2.375rem;
+  background-repeat: no-repeat;
+  background-position: 90% -12%;
 }
 
 .work {
-  /* border: 1px solid red; */
-  /* background-color: var(--clr-light-orange); */
-  /* background-image: url("../images/icon-work.svg"); */
-
   background-image: 
     url("../images/icon-work.svg"), linear-gradient(var(--clr-light-orange) 60%, var(--bg-primary) 40%);
-
-  background-repeat: no-repeat;
+}
+.play {
+  background-image: 
+    url("../images/icon-play.svg"), linear-gradient(var(--clr-soft-blue) 60%, var(--bg-primary) 40%);
+}
+.study {
+  background-image: 
+    url("../images/icon-study.svg"), linear-gradient(var(--clr-light-red) 60%, var(--bg-primary) 40%);
+}
+.exercise {
+  background-image: 
+    url("../images/icon-exercise.svg"), linear-gradient(var(--clr-lime-green) 60%, var(--bg-primary) 40%);
+}
+.social {
+  background-image: 
+    url("../images/icon-social.svg"), linear-gradient(var(--clr-violet) 60%, var(--bg-primary) 40%);
+}
+.self-care {
+  background-image: 
+    url("../images/icon-self-care.svg"), linear-gradient(var(--clr-soft-yellow) 60%, var(--bg-primary) 40%);
 }
 
 .result-card-inner {

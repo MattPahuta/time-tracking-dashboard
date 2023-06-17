@@ -128,6 +128,7 @@ body {
 
 
 /* User Card Styles */
+/* .result-card-inner */
 .user-card,
 .user-card-details,
 .result-card,
@@ -183,6 +184,46 @@ body {
 }
 
 /* Result Card Styles */
+
+.result-card {
+  padding-top: 2.375rem;
+}
+
+.work {
+  /* border: 1px solid red; */
+  /* background-color: var(--clr-light-orange); */
+  /* background-image: url("../images/icon-work.svg"); */
+
+  background-image: 
+    url("../images/icon-work.svg"), linear-gradient(var(--clr-light-orange) 60%, var(--bg-primary) 40%);
+
+  background-repeat: no-repeat;
+}
+
+.result-card-inner {
+  padding: 1.75rem 1.5rem;
+}
+
+.result-header,
+.result-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.result-header h3 {
+  font-weight: var(--fw-bold);
+}
+
+.current-result {
+  font-size: var(--fs-700);
+  font-weight: var(--fw-light);
+}
+
+.previous-result {
+  font-size: var(--fs-300);
+  font-weight: var(--fw-regular);
+}
 
 
 /* Selected period class */

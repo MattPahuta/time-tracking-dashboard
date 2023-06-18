@@ -101,9 +101,8 @@ p, h1, h2, h3, h4, h5, h6 {
 /* BASE STYLES */
 body {
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center stretch;
   font-family: var(--ff-primary);
   font-size: var(--fs-400);
   color: var(--clr-white);
@@ -114,14 +113,6 @@ main {
   max-width: 100%;
   padding: 0 1.5rem;
 }
-
-/* @media (min-width: 600px) {
-  body {
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
-  }
-} */
 
 /* Typography */
 
@@ -136,15 +127,11 @@ h1, h2 {
 .dashboard-container {
   width: 100%;
   max-width: 1120px;
+  margin-inline: auto;
   display: grid;
+  align-items: start;
   gap: 1.5rem;
 }
-
-.dashboard-card {
-  /* max-width: 327px; */
-}
-
-
 
 
 /* User Card Styles */
@@ -154,8 +141,6 @@ h1, h2 {
 .result-card,
 .result-card-inner {
   border-radius: var(--br-soft);
-  /* border: 1px solid red; */
-
 }
 
 .user-card-details,
@@ -207,12 +192,12 @@ h1, h2 {
 .result-card {
   padding-top: 2.375rem;
   background-repeat: no-repeat;
-  background-position: 90% -12%;
 }
 
 .work {
   background-image: 
     url("../images/icon-work.svg"), linear-gradient(var(--clr-light-orange) 60%, var(--bg-primary) 40%);
+    background-position: 90% -12%;
 }
 .play {
   background-image: 
@@ -232,6 +217,7 @@ h1, h2 {
 .social {
   background-image: 
     url("../images/icon-social.svg"), linear-gradient(var(--clr-violet) 60%, var(--bg-primary) 40%);
+    background-position: 90% -12%;
 }
 .self-care {
   background-image: 
@@ -272,15 +258,14 @@ h1, h2 {
   color: var(--clr-white);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 575px) {
   .dashboard-container {
-    gap: 1.875rem;
-    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+    max-width: 720px;
+    grid-template-columns: 1fr 1fr;
   }
   .user-card {
     grid-column: 1 / span 2;
   }
-
   .user-card-details,
   .period-selectors {
     padding: 2rem;
@@ -320,6 +305,16 @@ h1, h2 {
 
 }
 
-@media (min-width: 960px) {
+@media (min-width: 900px) {
+  .dashboard-container {
+    max-width: 1120px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.875rem;
+  }
+  .user-card {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    place-self: stretch;
+  }
 
 }

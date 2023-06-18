@@ -217,14 +217,17 @@ h1, h2 {
 .play {
   background-image: 
     url("../images/icon-play.svg"), linear-gradient(var(--clr-soft-blue) 60%, var(--bg-primary) 40%);
+    background-position: 90% -5%;
 }
 .study {
   background-image: 
     url("../images/icon-study.svg"), linear-gradient(var(--clr-light-red) 60%, var(--bg-primary) 40%);
+    background-position: 90% -5%;
 }
 .exercise {
   background-image: 
     url("../images/icon-exercise.svg"), linear-gradient(var(--clr-lime-green) 60%, var(--bg-primary) 40%);
+    background-position: 90% 0%;
 }
 .social {
   background-image: 
@@ -233,10 +236,13 @@ h1, h2 {
 .self-care {
   background-image: 
     url("../images/icon-self-care.svg"), linear-gradient(var(--clr-soft-yellow) 60%, var(--bg-primary) 40%);
+    background-position: 90% -5%;
 }
 
 .result-card-inner {
   padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .result-header,
@@ -297,6 +303,12 @@ h1, h2 {
   }
 
   /* result cards */
+  .result-card {
+    padding-top: 2.875rem;
+  }
+  .result-card-inner {
+    gap: 1.25rem;
+  }
   .result-body {
     flex-direction: column;
     align-items: flex-start;

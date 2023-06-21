@@ -316,5 +316,8 @@ h1, h2 {
     grid-row: 1 / span 2;
     place-self: stretch;
   }
+  .user-card-details {
+    padding-bottom: 5rem;
+  }
 
 }

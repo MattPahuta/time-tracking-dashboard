@@ -17,7 +17,6 @@
 
       <div class="user-card dashboard-card">
         <div class="user-card-details">
-          <!-- img src, alt as dynamic via JS -->
           <img src="./images/image-jeremy.png" alt="Jeremy Robson's avatar">
           <div class="user-card-title">
             <p>Report for</p>
@@ -25,11 +24,10 @@
           </div>
 
         </div>
-        <div class="period-selectors">
-          <!-- data-reply="${tweet.uuid} -->
-          <p class="period" data-daily="daily">Daily</p>
-          <p class="period selected" data-weekly="weekly">Weekly</p>
-          <p class="period" data-monthly="montly">Monthly</p>
+        <div id="period-selectors" class="period-selectors">
+          <p id="daily" class="period">Daily</p>
+          <p id="weekly" class="period selected">Weekly</p>
+          <p id="monthly" class="period">Monthly</p>
         </div>
       </div>
 
@@ -40,9 +38,10 @@
             <h3>Work</h3>
             <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
           </div>
+          <!-- result body content dynmaically rendered? -->
           <div class="result-body">
-            <p class="current-result"><span id="current-result">32hrs</span></p>
-            <p class="previous-result">Last Week - <span id="previous-result">36hrs</span></p>
+            <p class="current-result"><span id="work-current">32</span>hrs</p>
+            <p class="previous-result">Last Week - <span id="work-previous">36</span>hrs</p>
           </div>
         </div>
       </div>
@@ -56,8 +55,8 @@
             <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
           </div>
           <div class="result-body">
-            <p class="current-result"><span id="current-result">10hrs</span></p>
-            <p class="previous-result">Last Week - <span id="previous-result">8hrs</span></p>
+            <p class="current-result"><span id="play-current">10</span>hrs</p>
+            <p class="previous-result">Last Week - <span id="play-previous">8</span>hrs</p>
           </div>
         </div>
       </div>
@@ -70,8 +69,8 @@
             <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
           </div>
           <div class="result-body">
-            <p class="current-result"><span id="current-result">4hrs</span></p>
-            <p class="previous-result">Last Week - <span id="previous-result">7hrs</span></p>
+            <p class="current-result"><span id="study-current">4</span>hrs</p>
+            <p class="previous-result">Last Week - <span id="study-previous">7</span>hrs</p>
           </div>
         </div>
       </div>
@@ -84,8 +83,8 @@
             <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
           </div>
           <div class="result-body">
-            <p class="current-result"><span id="current-result">4hrs</span></p>
-            <p class="previous-result">Last Week - <span id="previous-result">5hrs</span></p>
+            <p class="current-result"><span id="exercise-current">4</span>hrs</p>
+            <p class="previous-result">Last Week - <span id="exercise-previous">5</span>hrs</p>
           </div>
         </div>
       </div>
@@ -98,8 +97,8 @@
             <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
           </div>
           <div class="result-body">
-            <p class="current-result"><span id="current-result">5hrs</span></p>
-            <p class="previous-result">Last Week - <span id="previous-result">10hrs</span></p>
+            <p class="current-result"><span id="social-current">5</span>hrs</p>
+            <p class="previous-result">Last Week - <span id="social-previous">10</span>hrs</p>
           </div>
         </div>
       </div>
@@ -112,8 +111,8 @@
             <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
           </div>
           <div class="result-body">
-            <p class="current-result"><span id="current-result">2hrs</span></p>
-            <p class="previous-result">Last Week - <span id="previous-result">2hrs</span></p>
+            <p class="current-result"><span id="self-care-current">2</span>hrs</p>
+            <p class="previous-result">Last Week - <span id="self-care-previous">2</span>hrs</p>
           </div>
         </div>
       </div>

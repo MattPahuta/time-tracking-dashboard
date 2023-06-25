@@ -28,6 +28,9 @@ Date:
   /* COLORS */
   /* Primary Colors */
 
+  background: hsla(236, 41%, 34%, 1);
+
+
   --clr-light-orange: hsl(15, 100%, 70%);
   --clr-soft-blue: hsl(195, 74%, 62%);
   --clr-light-red: hsl(348, 100%, 68%);
@@ -38,6 +41,7 @@ Date:
   /* Neutral Colors */
   --clr-white: hsl(0, 0%, 100%);
   --clr-blue: hsl(246, 80%, 60%, 1);
+  --clr-hover-blue: hsla(236, 41%, 34%, 1);
   --clr-dark-blue: hsl(235, 46%, 20%);
   --clr-desaturated-blue: hsl(235, 45%, 61%);
   --clr-pale-blue: hsl(236, 100%, 87%);
@@ -141,6 +145,16 @@ h1, h2 {
 .result-card,
 .result-card-inner {
   border-radius: var(--br-soft);
+}
+
+.result-card-inner:hover,
+.period:hover {
+  cursor: pointer;
+}
+
+.result-card-inner:hover {
+  background: var(--clr-hover-blue);
+  /* add transition of hover color, animation to lift card */
 }
 
 .user-card-details,

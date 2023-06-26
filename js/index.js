@@ -37,22 +37,26 @@ document.getElementById('period-selectors').addEventListener('click', e => {
   if (e.target.id === 'daily' || e.target.id === 'weekly' || e.target.id === 'monthly') {
     fetchTimerData(e.target.id)
   }
-})
+});
 
-// *** render v2
+// render dashboard data
 function render(period, data) {
-  console.log(data); // debug
   // select all the current classes
   const currentDataEls = Array.from(document.getElementsByClassName('current-data'));
   // populate current data elements with current data
   currentDataEls.forEach((el, i) => {
-    el.textContent = data[i].current;
+    data[i].current === 1 // check for hour values of 1
+      ? el.textContent = `${data[i].current}hr` 
+      : el.textContent = `${data[i].current}hrs`
   });
 
   // select all the previous classes
-  const previousDataEls = Array.from(document.getElementsByClassName('previous-data'))
+  const previousDataEls = Array.from(document.getElementsByClassName('previous-data'));
+  // populate previous data elements with previous data
   previousDataEls.forEach((el, i) => {
-    el.textContent = data[i].previous;
+    data[i].previous === 1 // check for hour values of 1
+      ? el.textContent = `${data[i].previous}hr`
+      : el.textContent = `${data[i].previous}hrs`
   });
 
   // Selected period styling - add/remove active selection class

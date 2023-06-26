@@ -148,7 +148,7 @@ h1, h2 {
 }
 
 .result-card-inner:hover,
-.period:hover {
+.period-select:hover {
   cursor: pointer;
 }
 
@@ -268,7 +268,7 @@ h1, h2 {
 
 
 /* Selected period class */
-.selected {
+.active {
   color: var(--clr-white);
 }
 

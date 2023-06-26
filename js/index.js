@@ -4,25 +4,22 @@
 let dashboardData = [];
 
 
-
-
 // Listen for clicks on period selectors
 document.getElementById('period-selectors').addEventListener('click', e => {
   // console.log(e.target.id)
+  // *** may not need if/else if statement here....
   if (e.target.id === 'daily') {
-    renderData(e.target.id)
+    handleData(e.target.id)
+    // call handleData, pass in e.target.id
     console.log(handleData(e.target.id))
   } else if (e.target.id === 'weekly') {
-    renderData(e.target.id)
+    handleData(e.target.id)
     console.log(handleData(e.target.id))
   } else if (e.target.id === 'monthly') {
-    renderData(e.target.id)
+    handleData(e.target.id)
     console.log(handleData(e.target.id))
   }
 })
-
-
-
 
 // Simple Fetch 
 async function fetchData() {
@@ -40,51 +37,60 @@ function handleData(selectedPeriod) {
 
   if (selectedPeriod === 'daily') {
     const dailyData = dashboardData.map((item) => item.timeframes.daily);
-    console.log(dailyData)
+    // additional parsing of data?????
+    // console.log(dailyData)
+    // dailyData.forEach(obj => console.log(obj))
     // call render, pass in dailyData
+    render(dailyData)
   } else if (selectedPeriod === 'weekly') {
     const weeklyData = dashboardData.map((item) => item.timeframes.weekly);
-    console.log(weeklyData)
     // call render, pass in weeklyData
+    render(weeklyData)
   } else {
     const monthlyData = dashboardData.map((item) => item.timeframes.monthly);
-    console.log(monthlyData)
     // call render, pass in monthlyData
+    render(monthlyData)
   }
 
 
 }
 
+function render(data) {
+  // data.forEach(function(el) {
+  //   let resultDataHtml = ``
+  //   resultDataHtml += `
+  //     <p class="current-result"><span>${el.current}</span>hrs</p>
+  //     <p class="previous-result">Last Week - <span>${el.previous}</span>hrs</p>
+  //     `
+  //   console.log(resultDataHtml)
+  // })
+
+  document.getElementById('work-current').textContent = data[0].current;
+  document.getElementById('work-previous').textContent = data[0].previous;
+  document.getElementById('play-current').textContent = data[1].current;
+  document.getElementById('play-previous').textContent = data[1].previous;
+  document.getElementById('study-current').textContent = data[2].current;
+  document.getElementById('study-previous').textContent = data[2].previous;
+  document.getElementById('exercise-current').textContent = data[3].current;
+  document.getElementById('exercise-previous').textContent = data[3].previous;
+  document.getElementById('social-current').textContent = data[4].current;
+  document.getElementById('social-previous').textContent = data[4].previous;
+  document.getElementById('self-care-current').textContent = data[5].current;
+  document.getElementById('self-care-previous').textContent = data[5].previous;
 
 
-// render data function
-function renderData(period) {
-  // if period is 'daily'
-    // - fetch daily data
-    // - paint daily data
-  // if period is 'weekly'
-    // - fetch weekly data
-    // - paint weekly data
+  const resultHtmlArr = data.map(function(categoryObj) {
+    return `
+      <p class="current-result"><span>${categoryObj.current}</span>hrs</p>
+      <p class="previous-result">Last Week - <span>${categoryObj.previous}</span>hrs</p>`
+  })
 
+  // resultHtmlArr.forEach(x => console.log(x));
 
-    console.log(`Rendering ${period} data...`)
-
-  // take in the right data from handleData
-  // loop over the resultCardData with forEach
-  // set the innerHtml of each card
-  const resultCardData = document.querySelectorAll('.result-body');
-
-
-
-  // Render the result-body content for each card
-  /*
-    <div class="result-body">
-      // 
-      <p class="current-result"><span id="work-current">${}</span>hrs</p>
-      <p class="previous-result">Last Week - <span id="work-previous">${}</span>hrs</p>
-    </div>
-  */
+  // const resultCardData = document.querySelectorAll('.result-body');
+  // resultCardData.forEach(el => el.innerHTML = '<p>Test</p>')
 }
+
 
 
 // function initializeDashboard() {
@@ -95,6 +101,9 @@ function renderData(period) {
 
 fetchData();
 
+
+
+// *** Previous fetch function with error catching:
 
 // Get Timer Data from json file
 // async function fetchTimerData() {

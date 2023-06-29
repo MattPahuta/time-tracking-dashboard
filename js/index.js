@@ -1,5 +1,6 @@
-// *** Time Tracking Dashboard *** //
-// ******************************* //
+// *********************************************************** //
+// *** Time Tracking Dashboard | A Frontend Mentor Project *** //
+// *********************************************************** //
 
 // Get Timer Data from json file - default to daily data
 async function fetchTimerData(period = 'daily') {
@@ -41,7 +42,7 @@ document.getElementById('period-selectors').addEventListener('click', e => {
 
 // render dashboard data
 function render(period, data) {
-  // select all the current classes
+  // select all the current-data classes
   const currentDataEls = Array.from(document.getElementsByClassName('current-data'));
   // populate current data elements with current data
   currentDataEls.forEach((el, i) => {
@@ -50,7 +51,7 @@ function render(period, data) {
       : el.textContent = `${data[i].current}hrs`
   });
 
-  // select all the previous classes
+  // select all the previous-data classes
   const previousDataEls = Array.from(document.getElementsByClassName('previous-data'));
   // populate previous data elements with previous data
   previousDataEls.forEach((el, i) => {
@@ -65,5 +66,4 @@ function render(period, data) {
     selector.classList.remove('active');
   }
   document.getElementById(period).classList.add('active');
-
 }

@@ -96,7 +96,7 @@ h1, h2 {
   line-height: 1.2;
 }
 
-.dashboard-container h3 {
+.dashboard-container h2 {
   font-size: var(--fs-400);
 }
 
@@ -227,7 +227,7 @@ h1, h2 {
   align-items: center;
 }
 
-.result-header h3 {
+.result-header h2 {
   font-weight: var(--fw-bold);
 }
 

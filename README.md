@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Frontend Mentor Solution Page](https://www.frontendmentor.io/solutions/interactive-dashboard-using-css-grid-and-javascript-Sd_f4L6Iw4)
+- [Live Site URL](https://time-tracking-dashboard-one-tan.vercel.app/)
 
 ## My process
 

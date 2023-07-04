@@ -35,15 +35,8 @@
   /* BORDER RADIUS */
   --br-soft: 15px;
   --br-round: 50%;
-  --grid-gap: 1.5rem;
   /* Transition */
   --tr-primary: 0.5s all ease;
-}
-
-@media (min-width: 600px) {
-    :root {
-      --grid-gap: 1.875rem;
-    }
 }
 
 /* RESET */
@@ -210,12 +203,17 @@ h1, h2 {
   padding: 1.75rem 1.5rem;
   display: flex;
   flex-direction: column;
-  transition: 0.5s all ease;
+  transition: var(--tr-primary);
 }
 
 .result-card-content:hover,
 .period-select:hover {
   cursor: pointer;
+}
+
+.period-select:hover {
+  color: var(--clr-white);
+  transition: var(--tr-primary);
 }
 
 .result-card-content:hover {

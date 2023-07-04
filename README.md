@@ -10,11 +10,8 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 
 ## Overview
@@ -29,9 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+![Desktop](./images/project-ss-desktop.png)
 
 
 ### Links
@@ -51,34 +46,9 @@ Add a screenshot of your solution. The easiest way to do this is to use Firefox 
 - JavaScript
 
 
-### What I learned
-
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Kevin Powell CSS Grid videos](https://www.youtube.com/playlist?list=PL4-IK0AVhVjPv5tfS82UF_iQgFp4Bl998) - CSS Grid is an obvious choice for the primary layout of this project and Kevin Powell's videos on the subject have been an essential resource for me. This playlist contains just about everything you need to know about Grid in a logical sequence.
 
 
 ## Author
@@ -86,8 +56,3 @@ Use this section to outline areas that you want to continue focusing on in futur
 - Website - [Matt Pahuta](https://www.mattpahuta.com)
 - Frontend Mentor - [@mattpahuta](https://www.frontendmentor.io/profile/MattPahuta)
 - Twitter - [@mattpahuta](https://www.twitter.com/MattPahuta)
-
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.

@@ -45,11 +45,9 @@ Users should be able to:
 - Mobile-first workflow
 - JavaScript
 
-
 ### Useful resources
 
 - [Kevin Powell CSS Grid videos](https://www.youtube.com/playlist?list=PL4-IK0AVhVjPv5tfS82UF_iQgFp4Bl998) - CSS Grid is an obvious choice for the primary layout of this project and Kevin Powell's videos on the subject have been an essential resource for me. This playlist contains just about everything you need to know about Grid in a logical sequence.
-
 
 ## Author
 

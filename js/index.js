@@ -1,7 +1,3 @@
-// *********************************************************** //
-// *** Time Tracking Dashboard | A Frontend Mentor Project *** //
-// *********************************************************** //
-
 // Get Timer Data from json file - default to daily data
 async function fetchTimerData(period = 'daily') {
   try {
@@ -42,7 +38,6 @@ document.getElementById('period-selectors').addEventListener('click', e => {
 
 // render dashboard data
 function render(period, data) {
-  // select all the current-data classes
   const currentDataEls = Array.from(document.getElementsByClassName('current-data'));
   // populate current data elements with current data
   currentDataEls.forEach((el, i) => {
